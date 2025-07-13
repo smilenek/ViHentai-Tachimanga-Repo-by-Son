@@ -1,0 +1,26 @@
+{
+  "baseUrl": "https://vi-hentai.moe",
+  "selectors": {
+    "mangaList": {
+      "item": "div.grid > a",
+      "title": "p",
+      "url": "@href",
+      "thumbnail": "img@src"
+    },
+    "mangaInfo": {
+      "title": "h1",
+      "description": "div:has(h2:contains('Thể loại')) + p",
+      "thumbnail": "img@src",
+      "genres": "div:has(h2:contains('Thể loại')) a"
+    },
+    "chapters": {
+      "item": "div:has(h2:contains('Chương')) + div a",
+      "title": ".",
+      "url": "@href"
+    },
+    "pages": {
+      "item": "div.container img",
+      "imageUrl": "@src"
+    }
+  }
+}
